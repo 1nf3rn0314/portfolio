@@ -1,0 +1,29 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200..900&display=swap'); */
+@import "tailwindcss";
+
+@font-face {
+  font-family: "GitHub Monaspace Neon";
+  src: url('/fonts/Monaspace Neon Var.woff2');
+}
+
+.neon-font {
+  font-family: "GitHub Monaspace Neon", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer {
+  .nav_right_item {
+    @apply hover:cursor-pointer hover:bg-[#00b300] hover:text-black p-4;
+  }
+}
+
+.green_background {
+  background: radial-gradient(circle, rgb(0, 132, 0) 0%, rgba(0, 0, 0, 1) 74%);
+}
+
+::selection {
+  background-color: #00b300;
+  color: rgb(24, 73, 24)
+}

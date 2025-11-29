@@ -1,33 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Navbar from "./components/Navbar"
+import TryHackMeBadge from "./components/TryHackMeBadge"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="bg-[#008a00] green_background min-h-screen w-full">
+        <Navbar/>
+        <div className="main-container mx-auto rounded-2xl my-auto text-green-300 max-h-[780px] pt-5 container overflow-y-auto">
+          <div className="section_1 text-lg">
+            $ whoami<br/>
+            Saptarshi Nanda (a.k.a. 1nf3rn0)<br/><br/>
+            $ pwd<br/>
+            Student at Jadavpur University (Instrumentation & Electronics Engineering (IEE))
+            <TryHackMeBadge/>
+          </div>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
